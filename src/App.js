@@ -22,6 +22,7 @@ class App extends Component {
           {/*Router transition link*/}
           <Route exact path="/" component={Landing} />
           <Route exact path="/library" component={Library} />
+          <Route exact path="/album" component={album} />
         </main>
       </div>
     );
