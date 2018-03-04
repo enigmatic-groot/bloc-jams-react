@@ -1,18 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import Landing from "./components/Landing";
+import Library from "./components/Library";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header>
+          <nav>
+            {/*Router transition link*/}
+            <Link to="/">Landing</Link>
+            <Link to="/library">Library</Link>
+          </nav>
+          <h1>Bloc Jams</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          {" "}
+          {/*Router transition link*/}
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/library" component={Library} />
+        </main>
       </div>
     );
   }
