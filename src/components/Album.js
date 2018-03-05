@@ -1,5 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const Album = () => <section className="album">Album will go here</section>;
+const Album = () => (
+    <section className='album'>
+        This is where the album will go
+    </section>
+)
 
-export default Album;
+export default Album
