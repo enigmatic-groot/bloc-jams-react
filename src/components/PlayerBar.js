@@ -24,7 +24,7 @@ class PlayerBar extends Component {
             max="1"
             min="0"
             step="0.01" //The step value determines the smallest value change the range input will recognize.
-            onChange={this.props.handleTimeChange}
+            onChange={this.props.handleTimeChange} //Event listener 
           />
         </section>
         <section id="volume-control">

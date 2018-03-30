@@ -114,6 +114,7 @@ class Album extends Component {
             src={this.state.album.albumCover}
             alt={this.state.album.slug}
           />
+
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -133,6 +134,7 @@ class Album extends Component {
                 key={index}
                 onClick={() => this.handleSongClick(song)}
               >
+
                 <td className="song-actions">
                   <button>
                     <span className="song-number">{index + 1}</span>
