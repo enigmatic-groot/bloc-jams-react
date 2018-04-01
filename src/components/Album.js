@@ -177,6 +177,7 @@ class Album extends Component {
           </tbody>
         </table>
         <PlayerBar
+<<<<<<< HEAD
                     isPlaying={this.state.isPlaying}
                     currentSong={this.state.currentSong}
                     volume={this.state.volume}
@@ -188,6 +189,19 @@ class Album extends Component {
                     handleTimeChange={(e) => this.handleTimeChange(e)}
                   
                 />
+=======
+          isPlaying={this.state.isPlaying}
+          currentSong={this.state.currentSong}
+          currentTime={this.audioElement.currentTime}
+          duration={this.audioElement.duration}
+          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+          handlePrevClick={() => this.handlePrevClick()}
+          handleNextClick={() => this.handleNextClick()}
+          handleTimeChange={e => this.handleTimeChange(e)}
+          handleVolumeChange={e => this.handleVolumeChange(e)}
+          formatTime={seconds => this.formatTime(seconds)}
+        />
+>>>>>>> assignment-9-PlayerBar-volume-slider
       </section>
     );
   }
