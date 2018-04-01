@@ -24,12 +24,20 @@ class PlayerBar extends Component {
             max="1"
             min="0"
             step="0.01" //The step value determines the smallest value change the range input will recognize.
-            onChange={this.props.handleTimeChange} //Event listener 
+            onChange={this.props.handleTimeChange} //Event listener
           />
         </section>
         <section id="volume-control">
           <div className="icon ion-volume-low" />
-          <input type="range" className="seek-bar" value="80" />
+          <input
+            type="range"
+            className="seek-bar"
+            value={this.props.volume}
+            max="1"
+            min="0"
+            step="any"
+            onChange={this.props.handleVolumeChange}
+          />
           <div className="icon ion-volume-high" />
         </section>
       </section>

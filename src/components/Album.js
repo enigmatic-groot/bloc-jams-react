@@ -14,30 +14,36 @@ class Album extends Component {
       currentSong: album.songs[0],
       currentTime: 0,
       duration: album.songs[0].duration,
-      isPlaying: false
+      volume: 0.80,
+      isPlaying: false,
     };
     this.audioElement = document.createElement("audio");
     this.audioElement.src = album.songs[0].audioSrc;
+    this.formatTime = this.formatTime.bind(this);
   }
 
   componentDidMount() {
-    this.eventListeners = {
-      timeupdate: e => {
-        this.setState({ currentTime: this.audioElement.currentTime });
-      },
-      durationchange: e => {
-        this.setState({ duration: this.audioElement.duration });
-      }
-    };
-    this.audioElement.addEventListener(
-      "timeupdate",
-      this.eventListeners.timeupdate
-    );
-    this.audioElement.addEventListener(
-      "durationchange",
-      this.eventListeners.durationchange
-    );
-  }
+         this.eventListeners = {
+             timeupdate: e => {
+                 this.setState({
+                     currentTime: this.audioElement.currentTime
+                 })
+             },
+             durationchange: e => {
+                 this.setState({
+                     duration: this.audioElement.duration
+                 })
+             },
+             volumechange: e => {
+                 this.setState({
+                     volume: this.audioElement.volume
+                 })
+             }
+         }
+         this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate)
+         this.audioElement.addEventListener('durationchange', this.eventListeners.durationchange)
+         this.audioElement.addEventListener('volumechange', this.eventListeners.volumechange)
+     }
 
   componentWillUnmount() {
     this.audioElement.src = null;
@@ -48,6 +54,10 @@ class Album extends Component {
     this.audioElement.removeEventListener(
       "durationchange",
       this.eventListeners.durationchange
+    );
+    this.audioElement.removeEventListener(
+      "volumechange",
+      this.eventListeners.volumechange
     );
   }
 
@@ -104,6 +114,25 @@ class Album extends Component {
     this.audioElement.currentTime = newTime;
     this.setState({ currentTime: newTime });
   }
+  handleVolumeChange(e) {
+       const newVolume = e.target.value
+       this.audioElement.volume = newVolume
+       this.setState({
+           volume: newVolume
+       })
+   }
+
+  formatTime(totalSeconds) {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds - hours * 3600) / 60);
+    let seconds = totalSeconds - hours * 3600 - minutes * 60;
+
+    seconds = Math.round(seconds);
+
+    let result = minutes < 10 ? minutes : minutes;
+    result += ":" + (seconds < 10 ? "0" + seconds : seconds);
+    return result;
+  }
 
   render() {
     return (
@@ -134,7 +163,6 @@ class Album extends Component {
                 key={index}
                 onClick={() => this.handleSongClick(song)}
               >
-
                 <td className="song-actions">
                   <button>
                     <span className="song-number">{index + 1}</span>
@@ -149,15 +177,17 @@ class Album extends Component {
           </tbody>
         </table>
         <PlayerBar
-          isPlaying={this.state.isPlaying}
-          currentSong={this.state.currentSong}
-          currentTime={this.audioElement.currentTime}
-          duration={this.audioElement.duration}
-          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-          handlePrevClick={() => this.handlePrevClick()}
-          handleNextClick={() => this.handleNextClick()}
-          handleTimeChange={e => this.handleTimeChange(e)}
-        />
+                    isPlaying={this.state.isPlaying}
+                    currentSong={this.state.currentSong}
+                    volume={this.state.volume}
+                    duration={this.state.duration}
+                    currentTime={this.state.currentTime}
+                    handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+                    handlePreviousClick={() => this.handlePreviousClick()}
+                    handleNextClick={() => this.handleNextClick()}
+                    handleTimeChange={(e) => this.handleTimeChange(e)}
+                  
+                />
       </section>
     );
   }
