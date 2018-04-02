@@ -157,7 +157,6 @@ class Album extends Component {
             alt={this.state.album.slug}
           />
 
-
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -194,7 +193,6 @@ class Album extends Component {
         </table>
 
         <PlayerBar
-<<<<<<< HEAD
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
           currentTime={this.audioElement.currentTime}
@@ -203,22 +201,7 @@ class Album extends Component {
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={e => this.handleTimeChange(e)}
-          handleVolumeChange={e => this.handleVolumeChange(e)}
-          formatTime={seconds => this.formatTime(seconds)}
         />
-=======
-                    isPlaying={this.state.isPlaying}
-                    currentSong={this.state.currentSong}
-                    volume={this.state.volume}
-                    duration={this.state.duration}
-                    currentTime={this.state.currentTime}
-                    handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-                    handlePreviousClick={() => this.handlePreviousClick()}
-                    handleNextClick={() => this.handleNextClick()}
-                    handleTimeChange={(e) => this.handleTimeChange(e)}
-
-                />
->>>>>>> checkpoint-9-PLAY3R-BAR-RANGEINPUTS
       </section>
     );
   }
