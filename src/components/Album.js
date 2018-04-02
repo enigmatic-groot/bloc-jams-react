@@ -144,6 +144,7 @@ class Album extends Component {
             alt={this.state.album.slug}
           />
 
+
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -186,7 +187,7 @@ class Album extends Component {
                     handlePreviousClick={() => this.handlePreviousClick()}
                     handleNextClick={() => this.handleNextClick()}
                     handleTimeChange={(e) => this.handleTimeChange(e)}
-                  
+
                 />
       </section>
     );
