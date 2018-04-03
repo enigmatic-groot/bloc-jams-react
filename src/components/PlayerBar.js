@@ -18,9 +18,15 @@ class PlayerBar extends Component {
           </button>
         </section>
         <section id="time-control">
+<<<<<<< HEAD
           <span className="current-time">
             {this.props.formatTime(this.props.currentTime)}
           </span>
+=======
+          <div className="current-time">
+            {this.props.formatTime(this.props.currentTime)}
+          </div>
+>>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
           <input
             type="range"
             className="seek-bar"

@@ -203,7 +203,10 @@ class Album extends Component {
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={e => this.handleTimeChange(e)}
+<<<<<<< HEAD
           handleVolumeChange={e => this.handleVolumeChange(e)}
+=======
+>>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
           formatTime={seconds => this.formatTime(seconds)}
         />
       </section>
