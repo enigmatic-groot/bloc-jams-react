@@ -201,6 +201,7 @@ class Album extends Component {
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={e => this.handleTimeChange(e)}
+          formatTime={seconds => this.formatTime(seconds)}
         />
       </section>
     );
