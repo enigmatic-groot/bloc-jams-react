@@ -28,6 +28,7 @@ class PlayerBar extends Component {
             step="0.01" //The step value determines the smallest value change the range input will recognize.
             onChange={this.props.handleTimeChange} //Event listener
           />
+
            <span className="total-time">
             {this.props.formatTime(this.props.duration)}
           </span>

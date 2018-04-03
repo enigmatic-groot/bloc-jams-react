@@ -8,6 +8,7 @@ class Album extends Component {
   constructor(props) {
     super(props);
 
+
     const album = albumData.find(album => {
       return album.slug === this.props.match.params.slug;
     });
@@ -23,8 +24,7 @@ class Album extends Component {
     this.audioElement.src = album.songs[0].audioSrc;
     this.formatTime = this.formatTime.bind(this);
   }
-
-  componentDidMount() {
+   componentDidMount() {
     this.eventListeners = {
       timeupdate: e => {
         this.setState({
