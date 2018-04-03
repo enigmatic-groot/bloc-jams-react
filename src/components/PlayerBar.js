@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+//import { Navbar, Row, Col } from "react-bootstrap";
+//import ".././styles/PlayerBar.css";
 
 class PlayerBar extends Component {
   render() {
@@ -16,7 +18,9 @@ class PlayerBar extends Component {
           </button>
         </section>
         <section id="time-control">
-          <div className="current-time">{this.props.currentTime}</div>
+          <span className="current-time">
+            {this.props.formatTime(this.props.currentTime)}
+          </span>
           <input
             type="range"
             className="seek-bar"
@@ -26,6 +30,9 @@ class PlayerBar extends Component {
             step="0.01" //The step value determines the smallest value change the range input will recognize.
             onChange={this.props.handleTimeChange} //Event listener
           />
+          <span className="total-time">
+            {this.props.formatTime(this.props.duration)}
+          </span>
         </section>
         <section id="volume-control">
           <div className="icon ion-volume-low" />

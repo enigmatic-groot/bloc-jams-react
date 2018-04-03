@@ -1,28 +1,73 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Francois+One|Pacifico");
+
+body,
+html {
+  height: 100%;
+}
+
+#root {
+  background-color: rgba(986, 01, 76, 0.2);
+  height: 100%;
+}
+
+.bloc-jams-header {
+  max-width: 700px;
+}
+
+.card-deck {
+  opacity: 0.75;
+}
+
+.card-header {
+  height: 100px;
+}
+
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 125px;
+  background: rgba(10, 19, 8, 0.46);
+  z-index: 100;
+}
+
+.player-bar .container {
+  display: table;
+  padding: 0;
+  width: 90%;
+  min-height: 100%;
+}
+
+.player-bar .control-group {
+  display: table-row;
+  vertical-align: middle;
+}
+
+#buttons {
+  width: 15%;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#time-control {
+  width: 75%;
+  text-align: center;
+  padding-right: 1rem;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#volume-control {
+  width: 75%;
+  text-align: center;
+  padding-right: 1rem;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
+@media (max-width: 1000px) {
+  .player-bar {
+    height: 100px;
+  }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  #album-cover-art {
+    height: 300px;
+    width: 300px;
+  }
 }

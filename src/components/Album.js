@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import albumData from "./../data/albums";
 import PlayerBar from "./PlayerBar";
+//import { Row, Col, Image, Table } from "react-bootstrap";
+//import ".././styles/Album.css";
 //Class based component
 class Album extends Component {
   constructor(props) {
