@@ -16,9 +16,7 @@ class PlayerBar extends Component {
           </button>
         </section>
         <section id="time-control">
-          <span className="current-time">
-            {this.props.formatTime(this.props.currentTime)}
-          </span>
+
 
           <div className="current-time">
             {this.props.formatTime(this.props.currentTime)}
