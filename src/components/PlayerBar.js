@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-//import { Navbar, Row, Col } from "react-bootstrap";
-//import ".././styles/PlayerBar.css";
 
 class PlayerBar extends Component {
   render() {
@@ -18,26 +16,9 @@ class PlayerBar extends Component {
           </button>
         </section>
         <section id="time-control">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <span className="current-time">
-            {this.props.formatTime(this.props.currentTime)}
-          </span>
-=======
-=======
-          <span className="current-time">
-            {this.props.formatTime(this.props.currentTime)}
-          </span>
-=======
-
->>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
-
->>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
           <div className="current-time">
             {this.props.formatTime(this.props.currentTime)}
           </div>
->>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
           <input
             type="range"
             className="seek-bar"
