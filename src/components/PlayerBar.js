@@ -16,6 +16,10 @@ class PlayerBar extends Component {
           </button>
         </section>
         <section id="time-control">
+          <span className="current-time">
+            {this.props.formatTime(this.props.currentTime)}
+          </span>
+
           <div className="current-time">
             {this.props.formatTime(this.props.currentTime)}
           </div>
@@ -29,7 +33,7 @@ class PlayerBar extends Component {
             onChange={this.props.handleTimeChange} //Event listener
           />
 
-           <span className="total-time">
+          <span className="total-time">
             {this.props.formatTime(this.props.duration)}
           </span>
         </section>

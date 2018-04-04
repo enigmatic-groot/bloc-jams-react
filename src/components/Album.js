@@ -8,7 +8,6 @@ class Album extends Component {
   constructor(props) {
     super(props);
 
-
     const album = albumData.find(album => {
       return album.slug === this.props.match.params.slug;
     });
@@ -24,7 +23,7 @@ class Album extends Component {
     this.audioElement.src = album.songs[0].audioSrc;
     this.formatTime = this.formatTime.bind(this);
   }
-   componentDidMount() {
+  componentDidMount() {
     this.eventListeners = {
       timeupdate: e => {
         this.setState({
@@ -158,8 +157,7 @@ class Album extends Component {
             src={this.state.album.albumCover}
             alt={this.state.album.slug}
           />
-
-          <div className="album-details">
+            <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
             <div id="release-info">{this.state.album.releaseInfo}</div>
@@ -204,7 +202,7 @@ class Album extends Component {
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={e => this.handleTimeChange(e)}
           formatTime={seconds => this.formatTime(seconds)}
-       />
+        />
       </section>
     );
   }
