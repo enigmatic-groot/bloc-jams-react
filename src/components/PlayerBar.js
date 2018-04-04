@@ -20,6 +20,7 @@ class PlayerBar extends Component {
         <section id="time-control">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <span className="current-time">
             {this.props.formatTime(this.props.currentTime)}
           </span>
@@ -28,6 +29,9 @@ class PlayerBar extends Component {
           <span className="current-time">
             {this.props.formatTime(this.props.currentTime)}
           </span>
+=======
+
+>>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
 
 >>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
           <div className="current-time">

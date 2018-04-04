@@ -23,6 +23,7 @@ class Album extends Component {
     this.audioElement.src = album.songs[0].audioSrc;
     this.formatTime = this.formatTime.bind(this);
   }
+
   componentDidMount() {
     this.eventListeners = {
       timeupdate: e => {
