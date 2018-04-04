@@ -19,10 +19,17 @@ class PlayerBar extends Component {
         </section>
         <section id="time-control">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <span className="current-time">
             {this.props.formatTime(this.props.currentTime)}
           </span>
 =======
+=======
+          <span className="current-time">
+            {this.props.formatTime(this.props.currentTime)}
+          </span>
+
+>>>>>>> Checkpoint-9-PLAYERBAR-RangeInputs
           <div className="current-time">
             {this.props.formatTime(this.props.currentTime)}
           </div>
@@ -37,7 +44,7 @@ class PlayerBar extends Component {
             onChange={this.props.handleTimeChange} //Event listener
           />
 
-           <span className="total-time">
+          <span className="total-time">
             {this.props.formatTime(this.props.duration)}
           </span>
         </section>
