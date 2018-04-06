@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Francois+One|Pacifico");
-
 body,
 html {
   height: 100%;
@@ -8,6 +6,57 @@ html {
 #root {
   background-color: rgba(986, 01, 76, 0.2);
   height: 100%;
+}
+#buttons {
+}
+#Blue {
+  color: blue;
+}
+
+#play-pause {
+  -webkit-border-radius: 3px;
+  border-radius: 10px;
+  border: none;
+  color: #d6c5c5;
+  cursor: pointer;
+
+  font-size: 30px;
+  padding: 5px 10px;
+
+  text-decoration: none;
+  -webkit-animation: glowing 1800ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+#song-action-btns:hover {
+  color: hotpink;
+  outline: #d6c5c5;
+  text-decoration: none;
+  -webkit-animation: glowing 5000ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+#play-pause:hover {
+  color: hotpink;
+
+}
+
+#next::-webkit-slider-thumb hover {
+  color: hotpink;
+}
+#next:hover {
+  font-size: 23px;
+  color: hotpink
+}
+#previous:hover {
+  font-size: 23px;
+}
+#previous:hover {
+  color: hotpink;
 }
 
 .bloc-jams-header {
@@ -32,6 +81,9 @@ html {
   z-index: 100;
 }
 
+.player-bar {
+}
+
 .player-bar .container {
   display: table;
   padding: 0;
@@ -45,14 +97,125 @@ html {
 }
 
 #buttons {
-  width: 15%;
+  width: 25%;
   text-align: center;
+  color: pink;
 }
+
+.song:hover {
+  -webkit-border-radius: 3px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+
+  padding: 5px 10px;
+
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: #b20000;
+      -webkit-box-shadow: 0 0 3px #b20000;
+    }
+    50% {
+      background-color: #dbff33;
+      -webkit-box-shadow: 0 0 40px #ff0000;
+    }
+    100% {
+      background-color: #b20000;
+      -webkit-box-shadow: 0 0 3px #b20000;
+    }
+  }
+}
+
+#song-list {
+}
+/*#buttons {
+  background-color: #004a7f;
+  -webkit-border-radius: 3px;
+  border-radius: 10px;
+  border: none;
+  color: #f44242;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 18px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}*/
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #b20000;
+    -webkit-box-shadow: 0 0 3px #b20000;
+  }
+  50% {
+    background-color: #ff0000;
+    -webkit-box-shadow: 0 0 40px #ff0000;
+  }
+  100% {
+    background-color: #b20000;
+    -webkit-box-shadow: 0 0 3px #b20000;
+  }
+}
+
+/*@-moz-keyframes glowing {
+  0% {
+    background-color: #b20000;
+    -moz-box-shadow: 0 0 3px #b20000;
+  }
+  50% {
+    background-color: #ff0000;
+    -moz-box-shadow: 0 0 40px #ff0000;
+  }
+  100% {
+    background-color: #b20000;
+    -moz-box-shadow: 0 0 3px #b20000;
+  }
+}
+
+@-o-keyframes glowing {
+  0% {
+    background-color: #b20000;
+    box-shadow: 0 0 3px #b20000;
+  }
+  50% {
+    background-color: #ff0000;
+    box-shadow: 0 0 40px #ff0000;
+  }
+  100% {
+    background-color: #b20000;
+    box-shadow: 0 0 3px #b20000;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #b20000;
+    box-shadow: 0 0 3px #b20000;
+  }
+  50% {
+    background-color: #ff0000;
+    box-shadow: 0 0 40px #ff0000;
+  }
+  100% {
+    background-color: #b20000;
+    box-shadow: 0 0 3px #b20000;
+  }
+}*/
 
 #time-control {
   width: 75%;
   text-align: center;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 #volume-control {

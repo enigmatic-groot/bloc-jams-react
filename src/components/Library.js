@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-//import { Row, Col, Image } from "react-bootstrap";
 import albumData from "./../data/albums";
-//import ".././styles/Library.css";
 
 class Library extends Component {
   constructor(props) {
