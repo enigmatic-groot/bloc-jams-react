@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-//import { Navbar, Row, Col } from "react-bootstrap";
-//import ".././styles/PlayerBar.css";
 
 class PlayerBar extends Component {
   render() {

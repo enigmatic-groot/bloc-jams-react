@@ -2,15 +2,44 @@ body,
 html {
   height: 100%;
 }
+#song-action-btns:hover {
+  width: 100%;
 
+  animation: pulse 7s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    color: #82e276;
+  }
+  90% {
+    color: #FF4136;
+  }
+  30% {
+    color: #f44195
+  }
+
+}
 #root {
-  background-color: rgba(986, 01, 76, 0.2);
+  background-color: #f44195;
   height: 100%;
+
 }
-#buttons {
+.song {
+  font-size: 20px;
 }
-#Blue {
-  color: blue;
+#volume-control {
+  width: 75%;
+  text-align: center;
+  padding-right: 1rem;
+  font-size: 20px;
+
+
+  animation: pulse 7.3s infinite;
+}
+}
+#time-control {
+  font-size: 20px;
 }
 
 #play-pause {
@@ -32,12 +61,10 @@ html {
 
 #song-action-btns:hover {
   color: hotpink;
-  outline: #d6c5c5;
-  text-decoration: none;
-  -webkit-animation: glowing 5000ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
+
+}
+#song-action-btns {
+font-size: 25px;
 }
 
 #play-pause:hover {
@@ -45,14 +72,19 @@ html {
 
 }
 
-#next::-webkit-slider-thumb hover {
-  color: hotpink;
+#song-title-color1:hover {
+  color: blue;
 }
+#next {
+  font-size: 23px;
+
+}
+
 #next:hover {
   font-size: 23px;
   color: hotpink
 }
-#previous:hover {
+#previous {
   font-size: 23px;
 }
 #previous:hover {
@@ -73,15 +105,13 @@ html {
 
 .player-bar {
   position: fixed;
+  top: 20;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 125px;
-  background: rgba(10, 19, 8, 0.46);
+  height: 170px;
+  background: #4286f4;
   z-index: 100;
-}
-
-.player-bar {
 }
 
 .player-bar .container {
@@ -130,28 +160,8 @@ html {
     }
   }
 }
-
 #song-list {
 }
-/*#buttons {
-  background-color: #004a7f;
-  -webkit-border-radius: 3px;
-  border-radius: 10px;
-  border: none;
-  color: #f44242;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Arial;
-  font-size: 18px;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  -webkit-animation: glowing 1500ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
-}*/
-
 @-webkit-keyframes glowing {
   0% {
     background-color: #b20000;
@@ -166,64 +176,11 @@ html {
     -webkit-box-shadow: 0 0 3px #b20000;
   }
 }
-
-/*@-moz-keyframes glowing {
-  0% {
-    background-color: #b20000;
-    -moz-box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    -moz-box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    -moz-box-shadow: 0 0 3px #b20000;
-  }
-}
-
-@-o-keyframes glowing {
-  0% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-}
-
-@keyframes glowing {
-  0% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-  50% {
-    background-color: #ff0000;
-    box-shadow: 0 0 40px #ff0000;
-  }
-  100% {
-    background-color: #b20000;
-    box-shadow: 0 0 3px #b20000;
-  }
-}*/
-
 #time-control {
   width: 75%;
   text-align: center;
   padding-right: 2rem;
 }
-
-#volume-control {
-  width: 75%;
-  text-align: center;
-  padding-right: 1rem;
-}
-
 @media (max-width: 1000px) {
   .player-bar {
     height: 100px;
