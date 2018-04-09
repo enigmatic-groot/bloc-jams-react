@@ -177,43 +177,38 @@ class Album extends Component {
                 key={index}
                 onClick={() => this.handleSongClick(song)}
                 onMouseEnter={() => this.setState({ isHovered: index + 1 })}
-                onMouseLeave={() => this.setState({ isHovered: false })}>
+                onMouseLeave={() => this.setState({ isHovered: false })}
+              >
                 <td className="song-actions">
-
-
-
-                     <button id="song-action-btns">
-                     { (this.state.currentSong.title === song.title) ?
-                       <span className={this.state.isPlaying ? "ion-pause" : "ion-play"}></span>
-                       :
-                       (this.state.isHovered === index+1) ?
-                       <span className="ion-play"></span>
-                       :
-                       <span className="song-number">{index+1}
-                       <tr id="color-title1">{this.state.currentSong.title.isHovered === song[0]}
-
-
+                  <button id="song-action-btns">
+                    {this.state.currentSong.title === song.title ? (
+                      <span
+                        className={
+                          this.state.isPlaying ? "ion-pause" : "ion-play"
+                        }
+                      />
+                    ) : this.state.isHovered === index + 1 ? (
+                      <span className="ion-play" />
+                    ) : (
+                      <span className="song-number">
+                        {index + 1}
+                        <tr id="color-title1">
+                          {this.state.currentSong.title.isHovered === song[0]}
                         </tr>
+                      </span>
+                    )}
+                  </button>
+                </td>
+                <td className="song-title">{song.title}</td>
+                <td className="color-title" />
 
-
-                       </span>
-                     }
-                     </button>
-                   </td>
-                   <td className="song-title">{song.title}</td>
-                   <td className="color-title"></td>
-
-
-
-                   <td className="song-duration">{this.formatTime(song.duration)}</td>
-                 </tr>
+                <td className="song-duration">
+                  {this.formatTime(song.duration)}
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>
-
-
-
-
 
         <PlayerBar
           isPlaying={this.state.isPlaying}
