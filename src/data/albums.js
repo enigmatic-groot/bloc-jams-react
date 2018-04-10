@@ -40,11 +40,6 @@ export default [
         title: "Magenta",
         duration: "374.22",
         audioSrc: "/assets/music/magenta.mp3"
-      },
-      {
-        title: "deadleaves",
-        duration: "304.00",
-        audioSrc: "/assets/music/deadleaves.mp3"
       }
     ]
   }
