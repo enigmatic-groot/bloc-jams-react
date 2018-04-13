@@ -1,7 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 ///import { Row, Col } from "react-bootstrap";
 //import ".././styles/Landing.css";
+=======
+>>>>>>> assignment-10-styling
 
 const Landing = () => (
   <section className="landing">

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import albumData from "./../data/albums";
 import PlayerBar from "./PlayerBar";
+
 //Class based component
 class Album extends Component {
   constructor(props) {
@@ -22,7 +23,6 @@ class Album extends Component {
     this.audioElement.src = album.songs[0].audioSrc;
     this.formatTime = this.formatTime.bind(this);
   }
-
 
   componentDidMount() {
     this.eventListeners = {
