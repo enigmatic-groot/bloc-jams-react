@@ -1,4 +1,5 @@
 import React from "react";
+
 const Landing = () => (
   <section className="landing">
     <h1 className="text-center mb-5">Turn the music up!</h1>
