@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import albumData from "./../data/albums";
 import PlayerBar from "./PlayerBar";
-//import { Row, Col, Image, Table } from "react-bootstrap";
-//import ".././styles/Album.css";
 //Class based component
 class Album extends Component {
   constructor(props) {
@@ -17,7 +15,8 @@ class Album extends Component {
       currentTime: 0,
       duration: album.songs[0].duration,
       volume: 80,
-      isPlaying: false
+      isPlaying: false,
+      isHovered: false
     };
     this.audioElement = document.createElement("audio");
     this.audioElement.src = album.songs[0].audioSrc;
@@ -176,15 +175,32 @@ class Album extends Component {
                 className="song"
                 key={index}
                 onClick={() => this.handleSongClick(song)}
+                onMouseEnter={() => this.setState({ isHovered: index + 1 })}
+                onMouseLeave={() => this.setState({ isHovered: false })}
               >
                 <td className="song-actions">
-                  <button>
-                    <span className="song-number">{index + 1}</span>
-                    <span className="ion-play" />
-                    <span className="ion-pause" />
+                  <button id="song-action-btns">
+                    {this.state.currentSong.title === song.title ? (
+                      <span
+                        className={
+                          this.state.isPlaying ? "ion-pause" : "ion-play"
+                        }
+                      />
+                    ) : this.state.isHovered === index + 1 ? (
+                      <span className="ion-play" />
+                    ) : (
+                      <span className="song-number">
+                        {index + 1}
+                        <tr id="color-title1">
+                          {this.state.currentSong.title.isHovered === song[0]}
+                        </tr>
+                      </span>
+                    )}
                   </button>
                 </td>
                 <td className="song-title">{song.title}</td>
+                <td className="color-title" />
+
                 <td className="song-duration">
                   {this.formatTime(song.duration)}
                 </td>
@@ -192,6 +208,7 @@ class Album extends Component {
             ))}
           </tbody>
         </table>
+
 
         <PlayerBar
           isPlaying={this.state.isPlaying}

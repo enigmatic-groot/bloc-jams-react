@@ -40,7 +40,16 @@ export default [
         title: "Magenta",
         duration: "374.22",
         audioSrc: "/assets/music/magenta.mp3"
+<<<<<<< HEAD
       }
+=======
+      },
+      // {
+      //   title: "deadleaves",
+      //   duration: "304.00",
+      //   audioSrc: "/assets/music/deadleaves.mp3"
+      // }
+>>>>>>> assignment-10-styling
     ]
   }
 ];
