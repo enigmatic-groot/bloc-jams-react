@@ -23,6 +23,7 @@ class Album extends Component {
     this.formatTime = this.formatTime.bind(this);
   }
 
+
   componentDidMount() {
     this.eventListeners = {
       timeupdate: e => {
