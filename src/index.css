@@ -1,19 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 html {
   font-size: 16px;
 }
 
->>>>>>> assignment-10-styling
-=======
->>>>>>> assignment-10-styling
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-
 
 button:focus,
 input:focus {

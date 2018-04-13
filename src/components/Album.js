@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import albumData from "./../data/albums";
 import PlayerBar from "./PlayerBar";
-
 //Class based component
 class Album extends Component {
   constructor(props) {
@@ -158,6 +157,7 @@ class Album extends Component {
             src={this.state.album.albumCover}
             alt={this.state.album.slug}
           />
+
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -190,17 +190,11 @@ class Album extends Component {
                     ) : this.state.isHovered === index + 1 ? (
                       <span className="ion-play" />
                     ) : (
-                      <span className="song-number">
-                        {index + 1}
-                        <tr id="color-title1">
-                          {this.state.currentSong.title.isHovered === song[0]}
-                        </tr>
-                      </span>
+                      <span className="song-number">{index + 1}</span>
                     )}
                   </button>
                 </td>
                 <td className="song-title">{song.title}</td>
-                <td className="color-title" />
 
                 <td className="song-duration">
                   {this.formatTime(song.duration)}
