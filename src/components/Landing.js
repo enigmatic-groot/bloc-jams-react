@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> assignment-10-styling
 const Landing = () => (
   <section className="landing">
     <h1 className="hero-title">Turn the music up!</h1>
