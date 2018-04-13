@@ -1,7 +1,4 @@
 import React from "react";
-///import { Row, Col } from "react-bootstrap";
-//import ".././styles/Landing.css";
-
 const Landing = () => (
   <section className="landing">
     <h1 className="text-center mb-5">Turn the music up!</h1>

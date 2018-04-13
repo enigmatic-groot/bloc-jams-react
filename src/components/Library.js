@@ -1,32 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import albumData from "./../data/albums";
-
 class Library extends Component {
   constructor(props) {
     super(props);
+    //Assign albumData to album property of the state object.
+    //manipulate state
     this.state = { albums: albumData };
   }
-
   render() {
     return (
-      <section className="row">
+      <section className="library">
         {this.state.albums.map((album, index) => (
-          <div className="col-md-6" key={index}>
-            <div className="card mb-4 box-shadow">
-              <Link to={`/album/${album.slug}`}>
-                <img
-                  className="card-img-top"
-                  src={album.albumCover}
-                  alt={album.title}
-                />
-                <div className="card-body">
-                  <p className="display-4">{album.title}</p>
-                  <p className="lead">{album.artist}</p>
-                </div>
-              </Link>
-            </div>
-          </div>
+          <Link to={`/album/${album.slug}`} key={index}>
+            <img src={album.albumCover} alt={album.title} />
+            <div>{album.title}</div>
+            <div>{album.artist}</div>
+            <div>{album.songs.length} songs</div>
+          </Link>
         ))}
       </section>
     );
