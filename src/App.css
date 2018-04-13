@@ -39,6 +39,7 @@ html {
   animation: pulse 7s infinite;
   flex: 1;
 }
+
 .song-actions > buttons {
   flex: 1;
 }
